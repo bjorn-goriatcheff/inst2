@@ -1,9 +1,11 @@
 #Epel tools RHEL 7
 rpm -Uvh epel-release-latest-7.noarch.rpm
+#NUX desktop
+rpm -Uvh nux-dextop-release-0-5.el7.nux.noarch.rpm
 
 #Decompress archives
+tar xf dep.tar.xz
 tar xf dep2.tar.xz
-tar xf dep3.tar.xz
 tar xf pip.tar.xz
 tar xf np.tar.xz
 tar xf six.tar.xz
