@@ -1,20 +1,16 @@
-tar xf dep.tar.xz
-tar xf pip.tar.xz
-tar xf lib.tar.xz
 tar xf Python-3.4.0.tar.xz
 #GCC Make etc..
 rpm -Uvh ./dep/*.rpm
-./Python-3.4.0/configure --enable-optimizations
-make
-make install
-/usr/local/bin/python3.4 -V
-
+rpm -Uvh ./dep2/*.rpm
+rpm -Uvh ./dep3/*.rpm
+scl enable rh-python34 bash
+python3 -V
 #Pip install
 rpm -Uvh python2-pip-8.1.2-7.e17.noarch.rpm
 
 #venv install and activation
-/usr/local/lib/pip3.4 install --no-index --find-links=./pip-modules/ ./pip-modules/virtualenv-16.4.1-py2.py3-none-any.whl
-/usr/local/python3.4 -m virtualenv vec_ai_env
+python3 install --no-index --find-links=./pip-modules/ ./pip-modules/virtualenv-16.4.1-py2.py3-none-any.whl
+python3 -m virtualenv vec_ai_env
 source ./vec_ai_env/bin/activate
 
 #Pip modules install

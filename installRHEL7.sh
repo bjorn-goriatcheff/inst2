@@ -28,6 +28,7 @@ sudo yum -y install libdc1394-devel --skip-broken
 sudo yum -y install tbb-devel eigen3-devel
 sudo yum -y install boost boost-thread boost-devel
 sudo yum -y install python34-tkinter.x86_64
+rpm -Uvh python2-pip-8.1.2-7.e17.noarch.rpm
 
 sudo pip3 install virtualenv
 virtualenv --system-site-packages ~/tensorflow
