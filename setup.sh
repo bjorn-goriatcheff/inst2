@@ -13,10 +13,10 @@ tar xf pd.tar.xz
 tar xf pw.tar.xz
 
 #GCC Make etc..
+rpm -Uvh ./dep/*.rpm
 rpm -Uvh ./dep2/*.rpm
-rpm -Uvh ./dep3/*.rpm
 
-source /opt/rh/rh-python34/enable
+source /opt/rh/rh-python36/enable
 echo python3 -V
 which python3
 #venv install and activation
